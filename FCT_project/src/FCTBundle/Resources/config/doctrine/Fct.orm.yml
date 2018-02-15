@@ -1,0 +1,60 @@
+FCTBundle\Entity\Fct:
+    type: entity
+    table: fct
+    indexes:
+        f_keyAlumnos:
+            columns:
+                - dni_alumno
+        f_keyProf:
+            columns:
+                - dni_prof
+        f_keyEmp:
+            columns:
+                - cif_empresa
+    id:
+        codFct:
+            type: string
+            nullable: false
+            length: 9
+            options:
+                fixed: false
+            id: true
+            column: cod_fct
+            generator:
+                strategy: IDENTITY
+    fields:
+        fecha:
+            type: date
+            nullable: false
+    manyToOne:
+        dniAlumno:
+            targetEntity: Alumno
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                dni_alumno:
+                    referencedColumnName: dni
+            orphanRemoval: false
+        cifEmpresa:
+            targetEntity: Empresa
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                cif_empresa:
+                    referencedColumnName: cif
+            orphanRemoval: false
+        dniProf:
+            targetEntity: Profesor
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                dni_prof:
+                    referencedColumnName: dni
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

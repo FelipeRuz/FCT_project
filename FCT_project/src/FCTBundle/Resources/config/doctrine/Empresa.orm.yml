@@ -1,0 +1,71 @@
+FCTBundle\Entity\Empresa:
+    type: entity
+    table: empresa
+    id:
+        cif:
+            type: string
+            nullable: false
+            length: 9
+            options:
+                fixed: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombre:
+            type: string
+            nullable: false
+            length: 15
+            options:
+                fixed: false
+        nomtutor:
+            type: string
+            nullable: false
+            length: 15
+            options:
+                fixed: false
+        direccion:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        poblacion:
+            type: string
+            nullable: false
+            length: 15
+            options:
+                fixed: false
+        cp:
+            type: string
+            nullable: false
+            length: 5
+            options:
+                fixed: false
+        provincia:
+            type: string
+            nullable: false
+            length: 15
+            options:
+                fixed: false
+        tlffijo:
+            type: string
+            nullable: false
+            length: 9
+            options:
+                fixed: false
+            column: tlfFijo
+        tlfmovil:
+            type: string
+            nullable: false
+            length: 9
+            options:
+                fixed: false
+            column: tlfMovil
+        email:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }
