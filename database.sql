@@ -26,74 +26,6 @@ DROP TABLE IF EXISTS USUARIOS;
 USE bdfct;
 
 /*==============================================================*/
-/* Table: ALUMNOS                                               */
-/*==============================================================*/
-CREATE TABLE ALUMNOS
-(
-   NIF_ALU              varchar(9) not null,
-   COD_CICLO            varchar(5) not null,
-   NOMBRE_ALU           varchar(20),
-   APELLIDO1_ALU        varchar(20),
-   APELLIDO2_ALU        varchar(20),
-   FOTOGRAFIA_ALU       varchar(100),
-   NICKNAME_ALU         varchar(20) unique not null,
-   DIRECCION_ALU        varchar(40),
-   POBLACION_ALU        varchar(25),
-   CPOSTAL_ALU          numeric(5,0),
-   PROVINCIA_ALU        numeric(2,0),
-   TELF_FIJO_ALU        numeric(9,0),
-   TELF_MOVIL_ALU       numeric(9,0),
-   EMAIL_ALU            varchar(25),
-   primary key (NIF_ALU),
-   /*constraint FK_AL_CF foreign key (COD_CICLO) references CICLOS (CODIGO)*/
-);
-
-/*==============================================================*/
-/* Table: CICLOS                                                */
-/*==============================================================*/
-create table CICLOS
-(
-   CODIGO               varchar(5) not null,
-   NOMBRE_CICLO         varchar(30),
-   GRADO                varchar(30),
-   HORASFCT             numeric(4,0),
-   primary key (CODIGO)
-);
-
-/*==============================================================*/
-/* Table: EMPRESAS                                              */
-/*==============================================================*/
-create table EMPRESAS
-(
-   CIF_EMP              varchar(9) not null,
-   NOMBRE_EMP           varchar(20),
-   TUTOR_EMP            varchar(20),
-   DIRECCION_EMP        varchar(40),
-   POBLACION_EMP        varchar(25),
-   CPOSTAL_EMP          numeric(5,0),
-   PROVINCIA_EMP        numeric(2,0),
-   TELF_FIJO_EMP        numeric(9,0),
-   TELF_MOVIL_EMP       numeric(9,0),
-   EMAIL_EMP            varchar(25),
-   primary key (CIF_EMP)
-);
-
-/*==============================================================*/
-/* Table: FCT                                                   */
-/*==============================================================*/
-create table FCT
-(
-   NIF_PROF             varchar(9) not null,
-   CIF_EMP              varchar(9) not null,
-   NIF_ALU              varchar(9) not null,
-   ANIO                 numeric(4,0),
-   primary key (NIF_PROF, CIF_EMP, NIF_ALU)
-   /*constraint FK_FCT foreign key (NIF_PROF) references PROFESORES (NIF_PROF)
-   --constraint FK_FCT2 foreign key (CIF_EMP) references EMPRESAS (CIF_EMP)
-   --constraint FK_FCT3 foreign key (NIF_ALU) references ALUMNOS (NIF_ALU)*/
-);
-
-/*==============================================================*/
 /* Table: PROFESORES                                            */
 /*==============================================================*/
 create table PROFESORES
@@ -137,6 +69,76 @@ create table PROVINCIAS
    ID_PROVINCIA         numeric(2,0) not null,
    NOMBRE               varchar(10),
    primary key (ID_PROVINCIA)
+);
+
+/*==============================================================*/
+/* Table: CICLOS                                                */
+/*==============================================================*/
+create table CICLOS
+(
+   CODIGO               varchar(5) not null,
+   NOMBRE_CICLO         varchar(30),
+   GRADO                varchar(30),
+   HORASFCT             numeric(4,0),
+   primary key (CODIGO)
+);
+
+/*==============================================================*/
+/* Table: ALUMNOS                                               */
+/*==============================================================*/
+CREATE TABLE ALUMNOS
+(
+   NIF_ALU              varchar(9) not null,
+   COD_CICLO            varchar(5) not null,
+   NOMBRE_ALU           varchar(20),
+   APELLIDO1_ALU        varchar(20),
+   APELLIDO2_ALU        varchar(20),
+   FOTOGRAFIA_ALU       varchar(100),
+   NICKNAME_ALU         varchar(20) unique not null,
+   DIRECCION_ALU        varchar(40),
+   POBLACION_ALU        varchar(25),
+   CPOSTAL_ALU          numeric(5,0),
+   PROVINCIA_ALU        numeric(2,0),
+   TELF_FIJO_ALU        numeric(9,0),
+   TELF_MOVIL_ALU       numeric(9,0),
+   EMAIL_ALU            varchar(25),
+   primary key (NIF_ALU),
+   constraint FK_AL_CF foreign key (COD_CICLO) references CICLOS (CODIGO)
+);
+
+/*==============================================================*/
+/* Table: EMPRESAS                                              */
+/*==============================================================*/
+create table EMPRESAS
+(
+   CIF_EMP              varchar(9) not null,
+   NOMBRE_EMP           varchar(20),
+   TUTOR_EMP            varchar(20),
+   DIRECCION_EMP        varchar(40),
+   POBLACION_EMP        varchar(25),
+   CPOSTAL_EMP          numeric(5,0),
+   PROVINCIA_EMP        numeric(2,0),
+   TELF_FIJO_EMP        numeric(9,0),
+   TELF_MOVIL_EMP       numeric(9,0),
+   EMAIL_EMP            varchar(25),
+   primary key (CIF_EMP)
+);
+
+/*==============================================================*/
+/* Table: FCT                                                   */
+/*==============================================================*/
+create table FCT
+(
+   /*ID_FCT               integer(9) not null AUTO_INCREMENT,*/
+   NIF_PROF             varchar(9) not null,
+   CIF_EMP              varchar(9) not null,
+   NIF_ALU              varchar(9) not null,
+   ANIO                 numeric(4,0),
+   /*primary key (ID_FCT),*/
+   primary key (NIF_PROF, CIF_EMP, NIF_ALU),
+   constraint FK_FCT foreign key (NIF_PROF) references PROFESORES (NIF_PROF),
+   constraint FK_FCT2 foreign key (CIF_EMP) references EMPRESAS (CIF_EMP),
+   constraint FK_FCT3 foreign key (NIF_ALU) references ALUMNOS (NIF_ALU)
 );
 
 INSERT INTO `USUARIOS` (`NIF_USER`, `NICKNAME_USER`, `PASSWORD_USER`, `ROL_USER`) VALUES
@@ -218,5 +220,5 @@ INSERT INTO `EMPRESAS` (`CIF_EMP`, `NOMBRE_EMP`, `TUTOR_EMP`, `DIRECCION_EMP`,
 VALUES
 ('1', 'SERVINFORM', 'JOSE', 'c/Alonso Sanchez nº 14', 'HUELVA', 21005, 21, 959, 666, 'rhumanos@servinform.es');
 
-INSERT INTO `FCT` (`NIF_ALU`, `CIF_EMP`, `NIF_ALU`, `ANIO`) VALUES
+INSERT INTO `FCT` (`NIF_ALU`, `CIF_EMP`, `NIF_PROF`, `ANIO`) VALUES
 ('48922995S', '1', '48922993S', 2015);
