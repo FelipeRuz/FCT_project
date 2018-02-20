@@ -1,11 +1,11 @@
 <?php
 
 namespace FctBundle\Entity;
-
+use Symfony\Component\Security\Core\User\UserInterface;
 /**
  * Profesor
  */
-class Profesor
+class Profesor implements UserInterface
 {
     /**
      * @var string
@@ -57,7 +57,28 @@ class Profesor
      */
     private $foto;
 
+    //Metodos a implementar para la seguridad
+    
+    //AUTH
+    public function getUsername() {
+        return $this->nick;
+    }
+    
+    public function getSalt() {
+        return null;
+    }
+    
+    public function getRoles() {
+        return array($this->getRoles());
+    }
+    
+    public function eraseCredentials() {
+        
+    }
 
+
+    //ENDAUTH
+    
     /**
      * Get dni
      *

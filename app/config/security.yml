@@ -1,12 +1,23 @@
 # To get started with security, check out the documentation:
 # http://symfony.com/doc/current/book/security.html
 security:
-
+    #La contraseña la hemos insertado predefinida con bcrypt.
+    # "https://www.dailycred.com/article/bcrypt-calculator"
+    enconders:
+        FctBundle\Entity\Profesor:
+            algorithm: bcrypt
+            cost: 4
+            
     # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     providers:
-        in_memory:
-            memory: ~
-
+#        in_memory:
+#            memory: ~
+        our_db_provider:
+            entity:
+                class: FctBundle:User
+                property: nick
+            
+            
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
         dev:
@@ -15,6 +26,15 @@ security:
 
         main:
             anonymous: ~
+            provider: our_db_provider
+            form_login:
+                login_path: /login
+                check_path: /login_check
+            
+            logout:
+                path: /logout
+                target: /login
+                # Nos redirigirá a Login.
             # activate different ways to authenticate
 
             # http_basic: ~
