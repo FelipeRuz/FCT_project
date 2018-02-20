@@ -1,75 +1,71 @@
 FctBundle\Entity\Empresa:
     type: entity
-    table: empresas
+    table: empresa
     id:
-        cifEmp:
+        cif:
             type: string
             nullable: false
             length: 9
             options:
                 fixed: false
             id: true
-            column: CIF_EMP
             generator:
                 strategy: IDENTITY
     fields:
-        nombreEmp:
+        nombre:
             type: string
-            nullable: true
-            length: 20
+            nullable: false
+            length: 15
             options:
                 fixed: false
-            column: NOMBRE_EMP
-        tutorEmp:
+        nomtutor:
             type: string
-            nullable: true
-            length: 20
+            nullable: false
+            length: 15
             options:
                 fixed: false
-            column: TUTOR_EMP
-        direccionEmp:
+        direccion:
             type: string
-            nullable: true
-            length: 40
+            nullable: false
+            length: 50
             options:
                 fixed: false
-            column: DIRECCION_EMP
-        poblacionEmp:
+        poblacion:
             type: string
-            nullable: true
-            length: 25
+            nullable: false
+            length: 15
             options:
                 fixed: false
-            column: POBLACION_EMP
-        cpostalEmp:
-            type: decimal
-            nullable: true
-            precision: 5
-            scale: 0
-            column: CPOSTAL_EMP
-        provinciaEmp:
-            type: decimal
-            nullable: true
-            precision: 2
-            scale: 0
-            column: PROVINCIA_EMP
-        telfFijoEmp:
-            type: decimal
-            nullable: true
-            precision: 9
-            scale: 0
-            column: TELF_FIJO_EMP
-        telfMovilEmp:
-            type: decimal
-            nullable: true
-            precision: 9
-            scale: 0
-            column: TELF_MOVIL_EMP
-        emailEmp:
+        cp:
             type: string
-            nullable: true
-            length: 25
+            nullable: false
+            length: 5
             options:
                 fixed: false
-            column: EMAIL_EMP
+        provincia:
+            type: string
+            nullable: false
+            length: 15
+            options:
+                fixed: false
+        tlffijo:
+            type: string
+            nullable: false
+            length: 9
+            options:
+                fixed: false
+            column: tlfFijo
+        tlfmovil:
+            type: string
+            nullable: false
+            length: 9
+            options:
+                fixed: false
+            column: tlfMovil
+        email:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
     lifecycleCallbacks: {  }

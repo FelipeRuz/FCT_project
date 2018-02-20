@@ -10,277 +10,278 @@ class Empresa
     /**
      * @var string
      */
-    private $cifEmp;
+    private $cif;
 
     /**
      * @var string
      */
-    private $nombreEmp;
+    private $nombre;
 
     /**
      * @var string
      */
-    private $tutorEmp;
+    private $nomtutor;
 
     /**
      * @var string
      */
-    private $direccionEmp;
+    private $direccion;
 
     /**
      * @var string
      */
-    private $poblacionEmp;
-
-    /**
-     * @var integer
-     */
-    private $cpostalEmp;
+    private $poblacion;
 
     /**
      * @var string
      */
-    private $provinciaEmp;
+    private $cp;
 
     /**
      * @var string
      */
-    private $telfFijoEmp;
+    private $provincia;
 
     /**
      * @var string
      */
-    private $telfMovilEmp;
+    private $tlffijo;
 
     /**
      * @var string
      */
-    private $emailEmp;
+    private $tlfmovil;
+
+    /**
+     * @var string
+     */
+    private $email;
 
 
     /**
-     * Get cifEmp
+     * Get cif
      *
      * @return string
      */
-    public function getCifEmp()
+    public function getCif()
     {
-        return $this->cifEmp;
+        return $this->cif;
     }
 
     /**
-     * Set nombreEmp
+     * Set nombre
      *
-     * @param string $nombreEmp
+     * @param string $nombre
      *
      * @return Empresa
      */
-    public function setNombreEmp($nombreEmp)
+    public function setNombre($nombre)
     {
-        $this->nombreEmp = $nombreEmp;
+        $this->nombre = $nombre;
 
         return $this;
     }
 
     /**
-     * Get nombreEmp
+     * Get nombre
      *
      * @return string
      */
-    public function getNombreEmp()
+    public function getNombre()
     {
-        return $this->nombreEmp;
+        return $this->nombre;
     }
 
     /**
-     * Set tutorEmp
+     * Set nomtutor
      *
-     * @param string $tutorEmp
+     * @param string $nomtutor
      *
      * @return Empresa
      */
-    public function setTutorEmp($tutorEmp)
+    public function setNomtutor($nomtutor)
     {
-        $this->tutorEmp = $tutorEmp;
+        $this->nomtutor = $nomtutor;
 
         return $this;
     }
 
     /**
-     * Get tutorEmp
+     * Get nomtutor
      *
      * @return string
      */
-    public function getTutorEmp()
+    public function getNomtutor()
     {
-        return $this->tutorEmp;
+        return $this->nomtutor;
     }
 
     /**
-     * Set direccionEmp
+     * Set direccion
      *
-     * @param string $direccionEmp
+     * @param string $direccion
      *
      * @return Empresa
      */
-    public function setDireccionEmp($direccionEmp)
+    public function setDireccion($direccion)
     {
-        $this->direccionEmp = $direccionEmp;
+        $this->direccion = $direccion;
 
         return $this;
     }
 
     /**
-     * Get direccionEmp
+     * Get direccion
      *
      * @return string
      */
-    public function getDireccionEmp()
+    public function getDireccion()
     {
-        return $this->direccionEmp;
+        return $this->direccion;
     }
 
     /**
-     * Set poblacionEmp
+     * Set poblacion
      *
-     * @param string $poblacionEmp
+     * @param string $poblacion
      *
      * @return Empresa
      */
-    public function setPoblacionEmp($poblacionEmp)
+    public function setPoblacion($poblacion)
     {
-        $this->poblacionEmp = $poblacionEmp;
+        $this->poblacion = $poblacion;
 
         return $this;
     }
 
     /**
-     * Get poblacionEmp
+     * Get poblacion
      *
      * @return string
      */
-    public function getPoblacionEmp()
+    public function getPoblacion()
     {
-        return $this->poblacionEmp;
+        return $this->poblacion;
     }
 
     /**
-     * Set cpostalEmp
+     * Set cp
      *
-     * @param integer $cpostalEmp
+     * @param string $cp
      *
      * @return Empresa
      */
-    public function setCpostalEmp($cpostalEmp)
+    public function setCp($cp)
     {
-        $this->cpostalEmp = $cpostalEmp;
+        $this->cp = $cp;
 
         return $this;
     }
 
     /**
-     * Get cpostalEmp
+     * Get cp
      *
-     * @return integer
+     * @return string
      */
-    public function getCpostalEmp()
+    public function getCp()
     {
-        return $this->cpostalEmp;
+        return $this->cp;
     }
 
     /**
-     * Set provinciaEmp
+     * Set provincia
      *
-     * @param string $provinciaEmp
+     * @param string $provincia
      *
      * @return Empresa
      */
-    public function setProvinciaEmp($provinciaEmp)
+    public function setProvincia($provincia)
     {
-        $this->provinciaEmp = $provinciaEmp;
+        $this->provincia = $provincia;
 
         return $this;
     }
 
     /**
-     * Get provinciaEmp
+     * Get provincia
      *
      * @return string
      */
-    public function getProvinciaEmp()
+    public function getProvincia()
     {
-        return $this->provinciaEmp;
+        return $this->provincia;
     }
 
     /**
-     * Set telfFijoEmp
+     * Set tlffijo
      *
-     * @param string $telfFijoEmp
+     * @param string $tlffijo
      *
      * @return Empresa
      */
-    public function setTelfFijoEmp($telfFijoEmp)
+    public function setTlffijo($tlffijo)
     {
-        $this->telfFijoEmp = $telfFijoEmp;
+        $this->tlffijo = $tlffijo;
 
         return $this;
     }
 
     /**
-     * Get telfFijoEmp
+     * Get tlffijo
      *
      * @return string
      */
-    public function getTelfFijoEmp()
+    public function getTlffijo()
     {
-        return $this->telfFijoEmp;
+        return $this->tlffijo;
     }
 
     /**
-     * Set telfMovilEmp
+     * Set tlfmovil
      *
-     * @param string $telfMovilEmp
+     * @param string $tlfmovil
      *
      * @return Empresa
      */
-    public function setTelfMovilEmp($telfMovilEmp)
+    public function setTlfmovil($tlfmovil)
     {
-        $this->telfMovilEmp = $telfMovilEmp;
+        $this->tlfmovil = $tlfmovil;
 
         return $this;
     }
 
     /**
-     * Get telfMovilEmp
+     * Get tlfmovil
      *
      * @return string
      */
-    public function getTelfMovilEmp()
+    public function getTlfmovil()
     {
-        return $this->telfMovilEmp;
+        return $this->tlfmovil;
     }
 
     /**
-     * Set emailEmp
+     * Set email
      *
-     * @param string $emailEmp
+     * @param string $email
      *
      * @return Empresa
      */
-    public function setEmailEmp($emailEmp)
+    public function setEmail($email)
     {
-        $this->emailEmp = $emailEmp;
+        $this->email = $email;
 
         return $this;
     }
 
     /**
-     * Get emailEmp
+     * Get email
      *
      * @return string
      */
-    public function getEmailEmp()
+    public function getEmail()
     {
-        return $this->emailEmp;
+        return $this->email;
     }
 }
+

@@ -10,92 +10,380 @@ class Alumno
     /**
      * @var string
      */
-    private $nifAlu;
+    private $dni;
 
     /**
      * @var string
+     */
+    private $nombre;
+
+    /**
+     * @var string
+     */
+    private $ape1;
+
+    /**
+     * @var string
+     */
+    private $ape2;
+
+    /**
+     * @var string
+     */
+    private $nick;
+
+    /**
+     * @var string
+     */
+    private $direccion;
+
+    /**
+     * @var string
+     */
+    private $poblacion;
+
+    /**
+     * @var string
+     */
+    private $cp;
+
+    /**
+     * @var string
+     */
+    private $provincia;
+
+    /**
+     * @var string
+     */
+    private $tlffijo;
+
+    /**
+     * @var string
+     */
+    private $tlfmovil;
+
+    /**
+     * @var string
+     */
+    private $email;
+
+    /**
+     * @var string
+     */
+    private $foto;
+
+    /**
+     * @var \FctBundle\Entity\Ciclo
      */
     private $codCiclo;
 
-    /**
-     * @var string
-     */
-    private $nombreAlu;
 
     /**
-     * @var string
-     */
-    private $apellido1Alu;
-
-    /**
-     * @var string
-     */
-    private $apellido2Alu;
-
-    /**
-     * @var string
-     */
-    private $fotografiaAlu;
-
-    /**
-     * @var string
-     */
-    private $nicknameAlu;
-
-    /**
-     * @var string
-     */
-    private $direccionAlu;
-
-    /**
-     * @var string
-     */
-    private $poblacionAlu;
-
-    /**
-     * @var integer
-     */
-    private $cpostalAlu;
-
-    /**
-     * @var string
-     */
-    private $provinciaAlu;
-
-    /**
-     * @var string
-     */
-    private $telfFijoAlu;
-
-    /**
-     * @var string
-     */
-    private $telfMovilAlu;
-
-    /**
-     * @var string
-     */
-    private $emailAlu;
-
-
-    /**
-     * Get nifAlu
+     * Get dni
      *
      * @return string
      */
-    public function getNifAlu()
+    public function getDni()
     {
-        return $this->nifAlu;
+        return $this->dni;
+    }
+
+    /**
+     * Set nombre
+     *
+     * @param string $nombre
+     *
+     * @return Alumno
+     */
+    public function setNombre($nombre)
+    {
+        $this->nombre = $nombre;
+
+        return $this;
+    }
+
+    /**
+     * Get nombre
+     *
+     * @return string
+     */
+    public function getNombre()
+    {
+        return $this->nombre;
+    }
+
+    /**
+     * Set ape1
+     *
+     * @param string $ape1
+     *
+     * @return Alumno
+     */
+    public function setApe1($ape1)
+    {
+        $this->ape1 = $ape1;
+
+        return $this;
+    }
+
+    /**
+     * Get ape1
+     *
+     * @return string
+     */
+    public function getApe1()
+    {
+        return $this->ape1;
+    }
+
+    /**
+     * Set ape2
+     *
+     * @param string $ape2
+     *
+     * @return Alumno
+     */
+    public function setApe2($ape2)
+    {
+        $this->ape2 = $ape2;
+
+        return $this;
+    }
+
+    /**
+     * Get ape2
+     *
+     * @return string
+     */
+    public function getApe2()
+    {
+        return $this->ape2;
+    }
+
+    /**
+     * Set nick
+     *
+     * @param string $nick
+     *
+     * @return Alumno
+     */
+    public function setNick($nick)
+    {
+        $this->nick = $nick;
+
+        return $this;
+    }
+
+    /**
+     * Get nick
+     *
+     * @return string
+     */
+    public function getNick()
+    {
+        return $this->nick;
+    }
+
+    /**
+     * Set direccion
+     *
+     * @param string $direccion
+     *
+     * @return Alumno
+     */
+    public function setDireccion($direccion)
+    {
+        $this->direccion = $direccion;
+
+        return $this;
+    }
+
+    /**
+     * Get direccion
+     *
+     * @return string
+     */
+    public function getDireccion()
+    {
+        return $this->direccion;
+    }
+
+    /**
+     * Set poblacion
+     *
+     * @param string $poblacion
+     *
+     * @return Alumno
+     */
+    public function setPoblacion($poblacion)
+    {
+        $this->poblacion = $poblacion;
+
+        return $this;
+    }
+
+    /**
+     * Get poblacion
+     *
+     * @return string
+     */
+    public function getPoblacion()
+    {
+        return $this->poblacion;
+    }
+
+    /**
+     * Set cp
+     *
+     * @param string $cp
+     *
+     * @return Alumno
+     */
+    public function setCp($cp)
+    {
+        $this->cp = $cp;
+
+        return $this;
+    }
+
+    /**
+     * Get cp
+     *
+     * @return string
+     */
+    public function getCp()
+    {
+        return $this->cp;
+    }
+
+    /**
+     * Set provincia
+     *
+     * @param string $provincia
+     *
+     * @return Alumno
+     */
+    public function setProvincia($provincia)
+    {
+        $this->provincia = $provincia;
+
+        return $this;
+    }
+
+    /**
+     * Get provincia
+     *
+     * @return string
+     */
+    public function getProvincia()
+    {
+        return $this->provincia;
+    }
+
+    /**
+     * Set tlffijo
+     *
+     * @param string $tlffijo
+     *
+     * @return Alumno
+     */
+    public function setTlffijo($tlffijo)
+    {
+        $this->tlffijo = $tlffijo;
+
+        return $this;
+    }
+
+    /**
+     * Get tlffijo
+     *
+     * @return string
+     */
+    public function getTlffijo()
+    {
+        return $this->tlffijo;
+    }
+
+    /**
+     * Set tlfmovil
+     *
+     * @param string $tlfmovil
+     *
+     * @return Alumno
+     */
+    public function setTlfmovil($tlfmovil)
+    {
+        $this->tlfmovil = $tlfmovil;
+
+        return $this;
+    }
+
+    /**
+     * Get tlfmovil
+     *
+     * @return string
+     */
+    public function getTlfmovil()
+    {
+        return $this->tlfmovil;
+    }
+
+    /**
+     * Set email
+     *
+     * @param string $email
+     *
+     * @return Alumno
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * Get email
+     *
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Set foto
+     *
+     * @param string $foto
+     *
+     * @return Alumno
+     */
+    public function setFoto($foto)
+    {
+        $this->foto = $foto;
+
+        return $this;
+    }
+
+    /**
+     * Get foto
+     *
+     * @return string
+     */
+    public function getFoto()
+    {
+        return $this->foto;
     }
 
     /**
      * Set codCiclo
      *
-     * @param string $codCiclo
+     * @param \FctBundle\Entity\Ciclo $codCiclo
      *
      * @return Alumno
      */
-    public function setCodCiclo($codCiclo)
+    public function setCodCiclo(\FctBundle\Entity\Ciclo $codCiclo = null)
     {
         $this->codCiclo = $codCiclo;
 
@@ -105,298 +393,11 @@ class Alumno
     /**
      * Get codCiclo
      *
-     * @return string
+     * @return \FctBundle\Entity\Ciclo
      */
     public function getCodCiclo()
     {
         return $this->codCiclo;
     }
-
-    /**
-     * Set nombreAlu
-     *
-     * @param string $nombreAlu
-     *
-     * @return Alumno
-     */
-    public function setNombreAlu($nombreAlu)
-    {
-        $this->nombreAlu = $nombreAlu;
-
-        return $this;
-    }
-
-    /**
-     * Get nombreAlu
-     *
-     * @return string
-     */
-    public function getNombreAlu()
-    {
-        return $this->nombreAlu;
-    }
-
-    /**
-     * Set apellido1Alu
-     *
-     * @param string $apellido1Alu
-     *
-     * @return Alumno
-     */
-    public function setApellido1Alu($apellido1Alu)
-    {
-        $this->apellido1Alu = $apellido1Alu;
-
-        return $this;
-    }
-
-    /**
-     * Get apellido1Alu
-     *
-     * @return string
-     */
-    public function getApellido1Alu()
-    {
-        return $this->apellido1Alu;
-    }
-
-    /**
-     * Set apellido2Alu
-     *
-     * @param string $apellido2Alu
-     *
-     * @return Alumno
-     */
-    public function setApellido2Alu($apellido2Alu)
-    {
-        $this->apellido2Alu = $apellido2Alu;
-
-        return $this;
-    }
-
-    /**
-     * Get apellido2Alu
-     *
-     * @return string
-     */
-    public function getApellido2Alu()
-    {
-        return $this->apellido2Alu;
-    }
-
-    /**
-     * Set fotografiaAlu
-     *
-     * @param string $fotografiaAlu
-     *
-     * @return Alumno
-     */
-    public function setFotografiaAlu($fotografiaAlu)
-    {
-        $this->fotografiaAlu = $fotografiaAlu;
-
-        return $this;
-    }
-
-    /**
-     * Get fotografiaAlu
-     *
-     * @return string
-     */
-    public function getFotografiaAlu()
-    {
-        return $this->fotografiaAlu;
-    }
-
-    /**
-     * Set nicknameAlu
-     *
-     * @param string $nicknameAlu
-     *
-     * @return Alumno
-     */
-    public function setNicknameAlu($nicknameAlu)
-    {
-        $this->nicknameAlu = $nicknameAlu;
-
-        return $this;
-    }
-
-    /**
-     * Get nicknameAlu
-     *
-     * @return string
-     */
-    public function getNicknameAlu()
-    {
-        return $this->nicknameAlu;
-    }
-
-    /**
-     * Set direccionAlu
-     *
-     * @param string $direccionAlu
-     *
-     * @return Alumno
-     */
-    public function setDireccionAlu($direccionAlu)
-    {
-        $this->direccionAlu = $direccionAlu;
-
-        return $this;
-    }
-
-    /**
-     * Get direccionAlu
-     *
-     * @return string
-     */
-    public function getDireccionAlu()
-    {
-        return $this->direccionAlu;
-    }
-
-    /**
-     * Set poblacionAlu
-     *
-     * @param string $poblacionAlu
-     *
-     * @return Alumno
-     */
-    public function setPoblacionAlu($poblacionAlu)
-    {
-        $this->poblacionAlu = $poblacionAlu;
-
-        return $this;
-    }
-
-    /**
-     * Get poblacionAlu
-     *
-     * @return string
-     */
-    public function getPoblacionAlu()
-    {
-        return $this->poblacionAlu;
-    }
-
-    /**
-     * Set cpostalAlu
-     *
-     * @param integer $cpostalAlu
-     *
-     * @return Alumno
-     */
-    public function setCpostalAlu($cpostalAlu)
-    {
-        $this->cpostalAlu = $cpostalAlu;
-
-        return $this;
-    }
-
-    /**
-     * Get cpostalAlu
-     *
-     * @return integer
-     */
-    public function getCpostalAlu()
-    {
-        return $this->cpostalAlu;
-    }
-
-    /**
-     * Set provinciaAlu
-     *
-     * @param string $provinciaAlu
-     *
-     * @return Alumno
-     */
-    public function setProvinciaAlu($provinciaAlu)
-    {
-        $this->provinciaAlu = $provinciaAlu;
-
-        return $this;
-    }
-
-    /**
-     * Get provinciaAlu
-     *
-     * @return string
-     */
-    public function getProvinciaAlu()
-    {
-        return $this->provinciaAlu;
-    }
-
-    /**
-     * Set telfFijoAlu
-     *
-     * @param string $telfFijoAlu
-     *
-     * @return Alumno
-     */
-    public function setTelfFijoAlu($telfFijoAlu)
-    {
-        $this->telfFijoAlu = $telfFijoAlu;
-
-        return $this;
-    }
-
-    /**
-     * Get telfFijoAlu
-     *
-     * @return string
-     */
-    public function getTelfFijoAlu()
-    {
-        return $this->telfFijoAlu;
-    }
-
-    /**
-     * Set telfMovilAlu
-     *
-     * @param string $telfMovilAlu
-     *
-     * @return Alumno
-     */
-    public function setTelfMovilAlu($telfMovilAlu)
-    {
-        $this->telfMovilAlu = $telfMovilAlu;
-
-        return $this;
-    }
-
-    /**
-     * Get telfMovilAlu
-     *
-     * @return string
-     */
-    public function getTelfMovilAlu()
-    {
-        return $this->telfMovilAlu;
-    }
-
-    /**
-     * Set emailAlu
-     *
-     * @param string $emailAlu
-     *
-     * @return Alumno
-     */
-    public function setEmailAlu($emailAlu)
-    {
-        $this->emailAlu = $emailAlu;
-
-        return $this;
-    }
-
-    /**
-     * Get emailAlu
-     *
-     * @return string
-     */
-    public function getEmailAlu()
-    {
-        return $this->emailAlu;
-    }
 }
+

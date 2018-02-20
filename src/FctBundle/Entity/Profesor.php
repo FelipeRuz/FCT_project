@@ -10,248 +10,278 @@ class Profesor
     /**
      * @var string
      */
-    private $nifProf;
+    private $dni;
 
     /**
      * @var string
      */
-    private $nombreProf;
+    private $nombre;
 
     /**
      * @var string
      */
-    private $apellido1Prof;
+    private $ape1;
 
     /**
      * @var string
      */
-    private $apellido2Prof;
+    private $ape2;
 
     /**
      * @var string
      */
-    private $fotografiaProf;
+    private $rol;
 
     /**
      * @var string
      */
-    private $nicknameProf;
+    private $nick;
 
     /**
      * @var string
      */
-    private $telfFijoProf;
+    private $pass;
 
     /**
      * @var string
      */
-    private $telfMovilProf;
+    private $tlf;
 
     /**
      * @var string
      */
-    private $emailProf;
+    private $email;
+
+    /**
+     * @var string
+     */
+    private $foto;
 
 
     /**
-     * Get nifProf
+     * Get dni
      *
      * @return string
      */
-    public function getNifProf()
+    public function getDni()
     {
-        return $this->nifProf;
+        return $this->dni;
     }
 
     /**
-     * Set nombreProf
+     * Set nombre
      *
-     * @param string $nombreProf
+     * @param string $nombre
      *
      * @return Profesor
      */
-    public function setNombreProf($nombreProf)
+    public function setNombre($nombre)
     {
-        $this->nombreProf = $nombreProf;
+        $this->nombre = $nombre;
 
         return $this;
     }
 
     /**
-     * Get nombreProf
+     * Get nombre
      *
      * @return string
      */
-    public function getNombreProf()
+    public function getNombre()
     {
-        return $this->nombreProf;
+        return $this->nombre;
     }
 
     /**
-     * Set apellido1Prof
+     * Set ape1
      *
-     * @param string $apellido1Prof
+     * @param string $ape1
      *
      * @return Profesor
      */
-    public function setApellido1Prof($apellido1Prof)
+    public function setApe1($ape1)
     {
-        $this->apellido1Prof = $apellido1Prof;
+        $this->ape1 = $ape1;
 
         return $this;
     }
 
     /**
-     * Get apellido1Prof
+     * Get ape1
      *
      * @return string
      */
-    public function getApellido1Prof()
+    public function getApe1()
     {
-        return $this->apellido1Prof;
+        return $this->ape1;
     }
 
     /**
-     * Set apellido2Prof
+     * Set ape2
      *
-     * @param string $apellido2Prof
+     * @param string $ape2
      *
      * @return Profesor
      */
-    public function setApellido2Prof($apellido2Prof)
+    public function setApe2($ape2)
     {
-        $this->apellido2Prof = $apellido2Prof;
+        $this->ape2 = $ape2;
 
         return $this;
     }
 
     /**
-     * Get apellido2Prof
+     * Get ape2
      *
      * @return string
      */
-    public function getApellido2Prof()
+    public function getApe2()
     {
-        return $this->apellido2Prof;
+        return $this->ape2;
     }
 
     /**
-     * Set fotografiaProf
+     * Set rol
      *
-     * @param string $fotografiaProf
+     * @param string $rol
      *
      * @return Profesor
      */
-    public function setFotografiaProf($fotografiaProf)
+    public function setRol($rol)
     {
-        $this->fotografiaProf = $fotografiaProf;
+        $this->rol = $rol;
 
         return $this;
     }
 
     /**
-     * Get fotografiaProf
+     * Get rol
      *
      * @return string
      */
-    public function getFotografiaProf()
+    public function getRol()
     {
-        return $this->fotografiaProf;
+        return $this->rol;
     }
 
     /**
-     * Set nicknameProf
+     * Set nick
      *
-     * @param string $nicknameProf
+     * @param string $nick
      *
      * @return Profesor
      */
-    public function setNicknameProf($nicknameProf)
+    public function setNick($nick)
     {
-        $this->nicknameProf = $nicknameProf;
+        $this->nick = $nick;
 
         return $this;
     }
 
     /**
-     * Get nicknameProf
+     * Get nick
      *
      * @return string
      */
-    public function getNicknameProf()
+    public function getNick()
     {
-        return $this->nicknameProf;
+        return $this->nick;
     }
 
     /**
-     * Set telfFijoProf
+     * Set pass
      *
-     * @param string $telfFijoProf
+     * @param string $pass
      *
      * @return Profesor
      */
-    public function setTelfFijoProf($telfFijoProf)
+    public function setPass($pass)
     {
-        $this->telfFijoProf = $telfFijoProf;
+        $this->pass = $pass;
 
         return $this;
     }
 
     /**
-     * Get telfFijoProf
+     * Get pass
      *
      * @return string
      */
-    public function getTelfFijoProf()
+    public function getPass()
     {
-        return $this->telfFijoProf;
+        return $this->pass;
     }
 
     /**
-     * Set telfMovilProf
+     * Set tlf
      *
-     * @param string $telfMovilProf
+     * @param string $tlf
      *
      * @return Profesor
      */
-    public function setTelfMovilProf($telfMovilProf)
+    public function setTlf($tlf)
     {
-        $this->telfMovilProf = $telfMovilProf;
+        $this->tlf = $tlf;
 
         return $this;
     }
 
     /**
-     * Get telfMovilProf
+     * Get tlf
      *
      * @return string
      */
-    public function getTelfMovilProf()
+    public function getTlf()
     {
-        return $this->telfMovilProf;
+        return $this->tlf;
     }
 
     /**
-     * Set emailProf
+     * Set email
      *
-     * @param string $emailProf
+     * @param string $email
      *
      * @return Profesor
      */
-    public function setEmailProf($emailProf)
+    public function setEmail($email)
     {
-        $this->emailProf = $emailProf;
+        $this->email = $email;
 
         return $this;
     }
 
     /**
-     * Get emailProf
+     * Get email
      *
      * @return string
      */
-    public function getEmailProf()
+    public function getEmail()
     {
-        return $this->emailProf;
+        return $this->email;
+    }
+
+    /**
+     * Set foto
+     *
+     * @param string $foto
+     *
+     * @return Profesor
+     */
+    public function setFoto($foto)
+    {
+        $this->foto = $foto;
+
+        return $this;
+    }
+
+    /**
+     * Get foto
+     *
+     * @return string
+     */
+    public function getFoto()
+    {
+        return $this->foto;
     }
 }
+

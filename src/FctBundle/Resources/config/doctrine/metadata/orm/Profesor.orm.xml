@@ -1,40 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
-  <entity name="Profesor" table="profesores">
-    <unique-constraints>
-      <unique-constraint name="NICKNAME_PROF" columns="NICKNAME_PROF"/>
-    </unique-constraints>
-    <id name="nifProf" type="string" column="NIF_PROF" length="9">
+  <entity name="Profesor" table="profesor">
+    <id name="dni" type="string" column="dni" length="9">
       <generator strategy="IDENTITY"/>
     </id>
-    <field name="nombreProf" type="string" column="NOMBRE_PROF" length="20" nullable="true">
+    <field name="nombre" type="string" column="nombre" length="15" nullable="false">
       <options>
         <option name="fixed"/>
       </options>
     </field>
-    <field name="apellido1Prof" type="string" column="APELLIDO1_PROF" length="20" nullable="true">
+    <field name="ape1" type="string" column="ape1" length="15" nullable="false">
       <options>
         <option name="fixed"/>
       </options>
     </field>
-    <field name="apellido2Prof" type="string" column="APELLIDO2_PROF" length="20" nullable="true">
+    <field name="ape2" type="string" column="ape2" length="15" nullable="false">
       <options>
         <option name="fixed"/>
       </options>
     </field>
-    <field name="fotografiaProf" type="string" column="FOTOGRAFIA_PROF" length="100" nullable="true">
+    <field name="rol" type="string" column="rol" length="15" nullable="false">
       <options>
         <option name="fixed"/>
       </options>
     </field>
-    <field name="nicknameProf" type="string" column="NICKNAME_PROF" length="20" nullable="false">
+    <field name="nick" type="string" column="nick" length="15" nullable="false">
       <options>
         <option name="fixed"/>
       </options>
     </field>
-    <field name="telfFijoProf" type="decimal" column="TELF_FIJO_PROF" precision="9" scale="0" nullable="true"/>
-    <field name="telfMovilProf" type="decimal" column="TELF_MOVIL_PROF" precision="9" scale="0" nullable="true"/>
-    <field name="emailProf" type="string" column="EMAIL_PROF" length="25" nullable="true">
+    <field name="pass" type="string" column="pass" length="100" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="tlf" type="string" column="tlf" length="9" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="email" type="string" column="email" length="30" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="foto" type="string" column="foto" length="50" nullable="false">
       <options>
         <option name="fixed"/>
       </options>

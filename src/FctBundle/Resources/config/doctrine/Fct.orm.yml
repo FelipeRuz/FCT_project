@@ -2,52 +2,59 @@ FctBundle\Entity\Fct:
     type: entity
     table: fct
     indexes:
-        FK_FCT2:
+        f_keyAlumnos:
             columns:
-                - CIF_EMP
-        FK_FCT3:
+                - dni_alumno
+        f_keyProf:
             columns:
-                - NIF_ALU
-        IDX_AAA3E3C1A78FCC64:
+                - dni_prof
+        f_keyEmp:
             columns:
-                - NIF_PROF
-    id: {  }
+                - cif_empresa
+    id:
+        codFct:
+            type: string
+            nullable: false
+            length: 9
+            options:
+                fixed: false
+            id: true
+            column: cod_fct
+            generator:
+                strategy: IDENTITY
     fields:
-        anio:
-            type: decimal
-            nullable: true
-            precision: 4
-            scale: 0
-            column: ANIO
-    oneToOne:
-        nifProf:
-            targetEntity: Profesor
-            cascade: {  }
-            fetch: LAZY
-            mappedBy: null
-            inversedBy: null
-            joinColumns:
-                NIF_PROF:
-                    referencedColumnName: NIF_PROF
-            orphanRemoval: false
-        cifEmp:
-            targetEntity: Empresa
-            cascade: {  }
-            fetch: LAZY
-            mappedBy: null
-            inversedBy: null
-            joinColumns:
-                CIF_EMP:
-                    referencedColumnName: CIF_EMP
-            orphanRemoval: false
-        nifAlu:
+        fecha:
+            type: date
+            nullable: false
+    manyToOne:
+        dniAlumno:
             targetEntity: Alumno
             cascade: {  }
             fetch: LAZY
             mappedBy: null
             inversedBy: null
             joinColumns:
-                NIF_ALU:
-                    referencedColumnName: NIF_ALU
+                dni_alumno:
+                    referencedColumnName: dni
+            orphanRemoval: false
+        cifEmpresa:
+            targetEntity: Empresa
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                cif_empresa:
+                    referencedColumnName: cif
+            orphanRemoval: false
+        dniProf:
+            targetEntity: Profesor
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                dni_prof:
+                    referencedColumnName: dni
             orphanRemoval: false
     lifecycleCallbacks: {  }

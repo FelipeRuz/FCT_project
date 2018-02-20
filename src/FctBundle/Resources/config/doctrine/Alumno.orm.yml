@@ -1,106 +1,95 @@
 FctBundle\Entity\Alumno:
     type: entity
-    table: alumnos
+    table: alumno
     indexes:
-        FK_AL_CF:
+        f_keyCiclo:
             columns:
-                - COD_CICLO
-    uniqueConstraints:
-        NICKNAME_ALU:
-            columns:
-                - NICKNAME_ALU
+                - cod_ciclo
     id:
-        nifAlu:
+        dni:
             type: string
             nullable: false
             length: 9
             options:
                 fixed: false
             id: true
-            column: NIF_ALU
             generator:
                 strategy: IDENTITY
     fields:
-        nombreAlu:
+        nombre:
             type: string
-            nullable: true
-            length: 20
+            nullable: false
+            length: 15
             options:
                 fixed: false
-            column: NOMBRE_ALU
-        apellido1Alu:
+        ape1:
             type: string
-            nullable: true
-            length: 20
+            nullable: false
+            length: 15
             options:
                 fixed: false
-            column: APELLIDO1_ALU
-        apellido2Alu:
+        ape2:
             type: string
-            nullable: true
-            length: 20
+            nullable: false
+            length: 15
             options:
                 fixed: false
-            column: APELLIDO2_ALU
-        fotografiaAlu:
+        nick:
             type: string
-            nullable: true
-            length: 100
+            nullable: false
+            length: 15
             options:
                 fixed: false
-            column: FOTOGRAFIA_ALU
-        nicknameAlu:
+        direccion:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        poblacion:
             type: string
             nullable: false
             length: 20
             options:
                 fixed: false
-            column: NICKNAME_ALU
-        direccionAlu:
+        cp:
             type: string
-            nullable: true
-            length: 40
+            nullable: false
+            length: 5
             options:
                 fixed: false
-            column: DIRECCION_ALU
-        poblacionAlu:
+        provincia:
             type: string
-            nullable: true
-            length: 25
+            nullable: false
+            length: 15
             options:
                 fixed: false
-            column: POBLACION_ALU
-        cpostalAlu:
-            type: decimal
-            nullable: true
-            precision: 5
-            scale: 0
-            column: CPOSTAL_ALU
-        provinciaAlu:
-            type: decimal
-            nullable: true
-            precision: 2
-            scale: 0
-            column: PROVINCIA_ALU
-        telfFijoAlu:
-            type: decimal
-            nullable: true
-            precision: 9
-            scale: 0
-            column: TELF_FIJO_ALU
-        telfMovilAlu:
-            type: decimal
-            nullable: true
-            precision: 9
-            scale: 0
-            column: TELF_MOVIL_ALU
-        emailAlu:
+        tlffijo:
             type: string
-            nullable: true
-            length: 25
+            nullable: false
+            length: 9
             options:
                 fixed: false
-            column: EMAIL_ALU
+            column: tlfFijo
+        tlfmovil:
+            type: string
+            nullable: false
+            length: 9
+            options:
+                fixed: false
+            column: tlfMovil
+        email:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+        foto:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
     manyToOne:
         codCiclo:
             targetEntity: Ciclo
@@ -109,7 +98,7 @@ FctBundle\Entity\Alumno:
             mappedBy: null
             inversedBy: null
             joinColumns:
-                COD_CICLO:
-                    referencedColumnName: CODIGO
+                cod_ciclo:
+                    referencedColumnName: cod_ciclo
             orphanRemoval: false
     lifecycleCallbacks: {  }

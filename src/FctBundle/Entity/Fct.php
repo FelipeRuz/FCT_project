@@ -10,117 +10,133 @@ class Fct
     /**
      * @var string
      */
-    private $nifProf;
+    private $codFct;
 
     /**
-     * @var string
+     * @var \DateTime
      */
-    private $cifEmp;
+    private $fecha;
 
     /**
-     * @var string
+     * @var \FctBundle\Entity\Alumno
      */
-    private $nifAlu;
+    private $dniAlumno;
 
     /**
-     * @var string
+     * @var \FctBundle\Entity\Empresa
      */
-    private $anio;
+    private $cifEmpresa;
+
+    /**
+     * @var \FctBundle\Entity\Profesor
+     */
+    private $dniProf;
 
 
     /**
-     * Set nifProf
+     * Get codFct
      *
-     * @param string $nifProf
+     * @return string
+     */
+    public function getCodFct()
+    {
+        return $this->codFct;
+    }
+
+    /**
+     * Set fecha
+     *
+     * @param \DateTime $fecha
      *
      * @return Fct
      */
-    public function setNifProf($nifProf)
+    public function setFecha($fecha)
     {
-        $this->nifProf = $nifProf;
+        $this->fecha = $fecha;
 
         return $this;
     }
 
     /**
-     * Get nifProf
+     * Get fecha
      *
-     * @return string
+     * @return \DateTime
      */
-    public function getNifProf()
+    public function getFecha()
     {
-        return $this->nifProf;
+        return $this->fecha;
     }
 
     /**
-     * Set cifEmp
+     * Set dniAlumno
      *
-     * @param string $cifEmp
+     * @param \FctBundle\Entity\Alumno $dniAlumno
      *
      * @return Fct
      */
-    public function setCifEmp($cifEmp)
+    public function setDniAlumno(\FctBundle\Entity\Alumno $dniAlumno = null)
     {
-        $this->cifEmp = $cifEmp;
+        $this->dniAlumno = $dniAlumno;
 
         return $this;
     }
 
     /**
-     * Get cifEmp
+     * Get dniAlumno
      *
-     * @return string
+     * @return \FctBundle\Entity\Alumno
      */
-    public function getCifEmp()
+    public function getDniAlumno()
     {
-        return $this->cifEmp;
+        return $this->dniAlumno;
     }
 
     /**
-     * Set nifAlu
+     * Set cifEmpresa
      *
-     * @param string $nifAlu
+     * @param \FctBundle\Entity\Empresa $cifEmpresa
      *
      * @return Fct
      */
-    public function setNifAlu($nifAlu)
+    public function setCifEmpresa(\FctBundle\Entity\Empresa $cifEmpresa = null)
     {
-        $this->nifAlu = $nifAlu;
+        $this->cifEmpresa = $cifEmpresa;
 
         return $this;
     }
 
     /**
-     * Get nifAlu
+     * Get cifEmpresa
      *
-     * @return string
+     * @return \FctBundle\Entity\Empresa
      */
-    public function getNifAlu()
+    public function getCifEmpresa()
     {
-        return $this->nifAlu;
+        return $this->cifEmpresa;
     }
 
     /**
-     * Set anio
+     * Set dniProf
      *
-     * @param string $anio
+     * @param \FctBundle\Entity\Profesor $dniProf
      *
      * @return Fct
      */
-    public function setAnio($anio)
+    public function setDniProf(\FctBundle\Entity\Profesor $dniProf = null)
     {
-        $this->anio = $anio;
+        $this->dniProf = $dniProf;
 
         return $this;
     }
 
     /**
-     * Get anio
+     * Get dniProf
      *
-     * @return string
+     * @return \FctBundle\Entity\Profesor
      */
-    public function getAnio()
+    public function getDniProf()
     {
-        return $this->anio;
+        return $this->dniProf;
     }
 }
+
