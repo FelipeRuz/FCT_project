@@ -1,9 +1,7 @@
 # To get started with security, check out the documentation:
 # http://symfony.com/doc/current/book/security.html
 security:
-    #La contraseña la hemos insertado predefinida con bcrypt.
-    # "https://www.dailycred.com/article/bcrypt-calculator"
-    enconders:
+    encoders:
         FctBundle\Entity\Profesor:
             algorithm: bcrypt
             cost: 4
@@ -14,7 +12,7 @@ security:
 #            memory: ~
         our_db_provider:
             entity:
-                class: FctBundle:User
+                class: FctBundle:Profesor
                 property: nick
             
             
@@ -30,7 +28,6 @@ security:
             form_login:
                 login_path: /login
                 check_path: /login_check
-            
             logout:
                 path: /logout
                 target: /login

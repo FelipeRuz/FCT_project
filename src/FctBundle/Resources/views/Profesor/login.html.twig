@@ -1,0 +1,11 @@
+{% extends "FctBundle::layout.html.twig"%}
+{% block content %}
+<div class="col-lg-4"> 
+    <form action="{{path("login_check")}}" method="post">
+        <label> Username/Nick: </label>
+        <input type="nick" id="nickprof" name="_username" value="{{ last_username }}" class="form-control"/>
+    </form>  
+</div>
+<div class="clearfix"></div>
+{% endblock %}
+

@@ -2,6 +2,7 @@
 
 namespace FctBundle\Entity;
 use Symfony\Component\Security\Core\User\UserInterface;
+
 /**
  * Profesor
  */
@@ -69,7 +70,7 @@ class Profesor implements UserInterface
     }
     
     public function getRoles() {
-        return array($this->getRoles());
+        return array($this->getRol());
     }
     
     public function eraseCredentials() {
@@ -219,7 +220,7 @@ class Profesor implements UserInterface
     public function setPass($pass)
     {
         $this->pass = $pass;
-
+        
         return $this;
     }
 
