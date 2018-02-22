@@ -223,6 +223,15 @@ class Profesor implements UserInterface
         
         return $this;
     }
+    /*
+     * Para la encriptacion de Symfony
+     */
+    public function setPassword($pass)
+    {
+        $this->pass = $pass;
+        
+        return $this;
+    }
 
     /**
      * Get pass
@@ -233,6 +242,11 @@ class Profesor implements UserInterface
     {
         return $this->pass;
     }
+    public function getPassword()
+    {
+        return $this->pass;
+    }
+
 
     /**
      * Set tlf
