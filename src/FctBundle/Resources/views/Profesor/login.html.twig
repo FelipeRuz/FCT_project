@@ -1,9 +1,6 @@
 {% extends "FctBundle::layout.html.twig"%}
 {% block content %}
     
-    {% if app.user is defined%}
-        {{dump(app.user)}}
-    {% endif %}
 <div class="container" style="background-color:#5eb5e0">
     <div class="col-lg-4"> 
         <form action="{{path("login_check")}}" method="post">
