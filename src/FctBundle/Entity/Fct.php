@@ -8,7 +8,7 @@ namespace FctBundle\Entity;
 class Fct
 {
     /**
-     * @var string
+     * @var integer
      */
     private $codFct;
 
@@ -20,23 +20,23 @@ class Fct
     /**
      * @var \FctBundle\Entity\Alumno
      */
-    private $dniAlumno;
+    private $idAlumno;
 
     /**
      * @var \FctBundle\Entity\Empresa
      */
-    private $cifEmpresa;
+    private $idEmpresa;
 
     /**
      * @var \FctBundle\Entity\Profesor
      */
-    private $dniProf;
+    private $idProfesor;
 
 
     /**
      * Get codFct
      *
-     * @return string
+     * @return integer
      */
     public function getCodFct()
     {
@@ -68,75 +68,75 @@ class Fct
     }
 
     /**
-     * Set dniAlumno
+     * Set idAlumno
      *
-     * @param \FctBundle\Entity\Alumno $dniAlumno
+     * @param \FctBundle\Entity\Alumno $idAlumno
      *
      * @return Fct
      */
-    public function setDniAlumno(\FctBundle\Entity\Alumno $dniAlumno = null)
+    public function setIdAlumno(\FctBundle\Entity\Alumno $idAlumno = null)
     {
-        $this->dniAlumno = $dniAlumno;
+        $this->idAlumno = $idAlumno;
 
         return $this;
     }
 
     /**
-     * Get dniAlumno
+     * Get idAlumno
      *
      * @return \FctBundle\Entity\Alumno
      */
-    public function getDniAlumno()
+    public function getIdAlumno()
     {
-        return $this->dniAlumno;
+        return $this->idAlumno;
     }
 
     /**
-     * Set cifEmpresa
+     * Set idEmpresa
      *
-     * @param \FctBundle\Entity\Empresa $cifEmpresa
+     * @param \FctBundle\Entity\Empresa $idEmpresa
      *
      * @return Fct
      */
-    public function setCifEmpresa(\FctBundle\Entity\Empresa $cifEmpresa = null)
+    public function setIdEmpresa(\FctBundle\Entity\Empresa $idEmpresa = null)
     {
-        $this->cifEmpresa = $cifEmpresa;
+        $this->idEmpresa = $idEmpresa;
 
         return $this;
     }
 
     /**
-     * Get cifEmpresa
+     * Get idEmpresa
      *
      * @return \FctBundle\Entity\Empresa
      */
-    public function getCifEmpresa()
+    public function getIdEmpresa()
     {
-        return $this->cifEmpresa;
+        return $this->idEmpresa;
     }
 
     /**
-     * Set dniProf
+     * Set idProfesor
      *
-     * @param \FctBundle\Entity\Profesor $dniProf
+     * @param \FctBundle\Entity\Profesor $idProfesor
      *
      * @return Fct
      */
-    public function setDniProf(\FctBundle\Entity\Profesor $dniProf = null)
+    public function setIdProfesor(\FctBundle\Entity\Profesor $idProfesor = null)
     {
-        $this->dniProf = $dniProf;
+        $this->idProfesor = $idProfesor;
 
         return $this;
     }
 
     /**
-     * Get dniProf
+     * Get idProfesor
      *
      * @return \FctBundle\Entity\Profesor
      */
-    public function getDniProf()
+    public function getIdProfesor()
     {
-        return $this->dniProf;
+        return $this->idProfesor;
     }
 }
 

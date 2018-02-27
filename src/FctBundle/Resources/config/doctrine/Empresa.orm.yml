@@ -2,16 +2,22 @@ FctBundle\Entity\Empresa:
     type: entity
     table: empresa
     id:
+        idEmpresa:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_empresa
+            generator:
+                strategy: IDENTITY
+    fields:
         cif:
             type: string
             nullable: false
             length: 9
             options:
                 fixed: false
-            id: true
-            generator:
-                strategy: IDENTITY
-    fields:
         nombre:
             type: string
             nullable: false

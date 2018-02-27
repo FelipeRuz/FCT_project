@@ -1,10 +1,37 @@
 {% extends "FctBundle::layout.html.twig"%}
 {% block content %}
-<div class="col-lg-4"> 
-    <form action="{{path("login_check")}}" method="post">
-        <label> Username/Nick: </label>
-        <input type="nick" id="nickprof" name="_username" value="{{ last_username }}" class="form-control"/>
-    </form>  
+    
+<div class="container" style="background-color:#5eb5e0">
+    <div class="col-lg-4"> 
+        <form action="{{path("login_check")}}" method="post">
+            <label><b> Username/Nick: </b></label>
+            <!--<input type="nick" id="nickprof" name="_username" value=" last_username }}" class="form-control"/>-->
+            <input type="nick" id="nickprof" name="_username" class="form-control"/>
+            <label><b> Password: </b></label>
+            <input type="pass" id="password" name="_password" class="form-control"/>
+            <br>
+            <input type="submit" value="Login" class="btn btn-success"/>
+            <input type="button" value="Cancel" class="btn btn-danger" onclick="Recargar();"/>
+            <input type="hidden" name="_target_path" value="/login"/>
+            <script>
+                function Recargar()
+                {
+                  location.reload(true);  
+                }
+            </script>
+        </form>  
+    </div>
+    <br>
+</div>
+            <br>        
+<div class="container" style="background-color:#5eb5e0">
+    <div class="col-lg-4"> 
+        <h3>Registro de profesor</h3>
+        {{form_start(form,{ 'action':'','method':'POST'})}}
+        
+        {{form_end(form)}}
+    </div>
+    <br>
 </div>
 <div class="clearfix"></div>
 {% endblock %}

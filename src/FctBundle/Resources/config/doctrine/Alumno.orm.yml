@@ -6,16 +6,22 @@ FctBundle\Entity\Alumno:
             columns:
                 - cod_ciclo
     id:
+        idAlumno:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_alumno
+            generator:
+                strategy: IDENTITY
+    fields:
         dni:
             type: string
             nullable: false
             length: 9
             options:
                 fixed: false
-            id: true
-            generator:
-                strategy: IDENTITY
-    fields:
         nombre:
             type: string
             nullable: false

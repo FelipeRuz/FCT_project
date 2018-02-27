@@ -8,6 +8,11 @@ namespace FctBundle\Entity;
 class Empresa
 {
     /**
+     * @var integer
+     */
+    private $idEmpresa;
+
+    /**
      * @var string
      */
     private $cif;
@@ -57,6 +62,30 @@ class Empresa
      */
     private $email;
 
+
+    /**
+     * Get idEmpresa
+     *
+     * @return integer
+     */
+    public function getIdEmpresa()
+    {
+        return $this->idEmpresa;
+    }
+
+    /**
+     * Set cif
+     *
+     * @param string $cif
+     *
+     * @return Empresa
+     */
+    public function setCif($cif)
+    {
+        $this->cif = $cif;
+
+        return $this;
+    }
 
     /**
      * Get cif

@@ -4,20 +4,19 @@ FctBundle\Entity\Fct:
     indexes:
         f_keyAlumnos:
             columns:
-                - dni_alumno
+                - id_alumno
         f_keyProf:
             columns:
-                - dni_prof
+                - id_profesor
         f_keyEmp:
             columns:
-                - cif_empresa
+                - id_empresa
     id:
         codFct:
-            type: string
+            type: integer
             nullable: false
-            length: 9
             options:
-                fixed: false
+                unsigned: false
             id: true
             column: cod_fct
             generator:
@@ -27,34 +26,34 @@ FctBundle\Entity\Fct:
             type: date
             nullable: false
     manyToOne:
-        dniAlumno:
+        idAlumno:
             targetEntity: Alumno
             cascade: {  }
             fetch: LAZY
             mappedBy: null
             inversedBy: null
             joinColumns:
-                dni_alumno:
-                    referencedColumnName: dni
+                id_alumno:
+                    referencedColumnName: id_alumno
             orphanRemoval: false
-        cifEmpresa:
+        idEmpresa:
             targetEntity: Empresa
             cascade: {  }
             fetch: LAZY
             mappedBy: null
             inversedBy: null
             joinColumns:
-                cif_empresa:
-                    referencedColumnName: cif
+                id_empresa:
+                    referencedColumnName: id_empresa
             orphanRemoval: false
-        dniProf:
+        idProfesor:
             targetEntity: Profesor
             cascade: {  }
             fetch: LAZY
             mappedBy: null
             inversedBy: null
             joinColumns:
-                dni_prof:
-                    referencedColumnName: dni
+                id_profesor:
+                    referencedColumnName: id_profesor
             orphanRemoval: false
     lifecycleCallbacks: {  }

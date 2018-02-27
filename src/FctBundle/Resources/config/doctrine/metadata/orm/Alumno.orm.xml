@@ -4,9 +4,14 @@
     <indexes>
       <index name="f_keyCiclo" columns="cod_ciclo"/>
     </indexes>
-    <id name="dni" type="string" column="dni" length="9">
+    <id name="idAlumno" type="integer" column="id_alumno">
       <generator strategy="IDENTITY"/>
     </id>
+    <field name="dni" type="string" column="dni" length="9" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
     <field name="nombre" type="string" column="nombre" length="15" nullable="false">
       <options>
         <option name="fixed"/>

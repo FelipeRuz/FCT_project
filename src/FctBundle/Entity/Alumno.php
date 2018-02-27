@@ -8,6 +8,11 @@ namespace FctBundle\Entity;
 class Alumno
 {
     /**
+     * @var integer
+     */
+    private $idAlumno;
+
+    /**
      * @var string
      */
     private $dni;
@@ -77,6 +82,30 @@ class Alumno
      */
     private $codCiclo;
 
+
+    /**
+     * Get idAlumno
+     *
+     * @return integer
+     */
+    public function getIdAlumno()
+    {
+        return $this->idAlumno;
+    }
+
+    /**
+     * Set dni
+     *
+     * @param string $dni
+     *
+     * @return Alumno
+     */
+    public function setDni($dni)
+    {
+        $this->dni = $dni;
+
+        return $this;
+    }
 
     /**
      * Get dni

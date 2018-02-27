@@ -9,6 +9,11 @@ use Symfony\Component\Security\Core\User\UserInterface;
 class Profesor implements UserInterface
 {
     /**
+     * @var integer
+     */
+    private $idProfesor;
+
+    /**
      * @var string
      */
     private $dni;
@@ -59,7 +64,6 @@ class Profesor implements UserInterface
     private $foto;
 
     //Metodos a implementar para la seguridad
-    
     //AUTH
     public function getUsername() {
         return $this->nick;
@@ -76,10 +80,32 @@ class Profesor implements UserInterface
     public function eraseCredentials() {
         
     }
-
-
     //ENDAUTH
     
+    /**
+     * Get idProfesor
+     *
+     * @return integer
+     */
+    public function getIdProfesor()
+    {
+        return $this->idProfesor;
+    }
+
+    /**
+     * Set dni
+     *
+     * @param string $dni
+     *
+     * @return Profesor
+     */
+    public function setDni($dni)
+    {
+        $this->dni = $dni;
+
+        return $this;
+    }
+
     /**
      * Get dni
      *
@@ -220,16 +246,28 @@ class Profesor implements UserInterface
     public function setPass($pass)
     {
         $this->pass = $pass;
+
+        return $this;
+    }
+    
+    public function setPassword($pass)
+    {
+        $this->pass = $pass;
         
         return $this;
     }
-
+    
     /**
      * Get pass
      *
      * @return string
      */
     public function getPass()
+    {
+        return $this->pass;
+    }
+    
+    public function getPassword()
     {
         return $this->pass;
     }

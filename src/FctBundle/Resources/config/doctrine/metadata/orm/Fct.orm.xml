@@ -2,27 +2,27 @@
 <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
   <entity name="Fct" table="fct">
     <indexes>
-      <index name="f_keyAlumnos" columns="dni_alumno"/>
-      <index name="f_keyProf" columns="dni_prof"/>
-      <index name="f_keyEmp" columns="cif_empresa"/>
+      <index name="f_keyAlumnos" columns="id_alumno"/>
+      <index name="f_keyProf" columns="id_profesor"/>
+      <index name="f_keyEmp" columns="id_empresa"/>
     </indexes>
-    <id name="codFct" type="string" column="cod_fct" length="9">
+    <id name="codFct" type="integer" column="cod_fct">
       <generator strategy="IDENTITY"/>
     </id>
     <field name="fecha" type="date" column="fecha" nullable="false"/>
-    <many-to-one field="dniAlumno" target-entity="Alumno" fetch="LAZY">
+    <many-to-one field="idAlumno" target-entity="Alumno" fetch="LAZY">
       <join-columns>
-        <join-column name="dni_alumno" referenced-column-name="dni"/>
+        <join-column name="id_alumno" referenced-column-name="id_alumno"/>
       </join-columns>
     </many-to-one>
-    <many-to-one field="cifEmpresa" target-entity="Empresa" fetch="LAZY">
+    <many-to-one field="idEmpresa" target-entity="Empresa" fetch="LAZY">
       <join-columns>
-        <join-column name="cif_empresa" referenced-column-name="cif"/>
+        <join-column name="id_empresa" referenced-column-name="id_empresa"/>
       </join-columns>
     </many-to-one>
-    <many-to-one field="dniProf" target-entity="Profesor" fetch="LAZY">
+    <many-to-one field="idProfesor" target-entity="Profesor" fetch="LAZY">
       <join-columns>
-        <join-column name="dni_prof" referenced-column-name="dni"/>
+        <join-column name="id_profesor" referenced-column-name="id_profesor"/>
       </join-columns>
     </many-to-one>
   </entity>
